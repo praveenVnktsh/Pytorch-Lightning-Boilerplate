@@ -1,2 +1,8 @@
 # Pytorch Lightning Boilerplate
- Boilerplate for quick iteration with pytorch lightning
+
+
+Got bored of rewriting stuff/looking for old code.
+
+Boilerplate for building models with pytorch Lightning.
+
+
