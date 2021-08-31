@@ -4,9 +4,9 @@ import numpy as np
 import torch
 
 class Model(pl.LightningModule):
-    def __init__(self):
+    def __init__(self, hparams):
         super().__init__()
-
+        self.hparams = hparams
         self.nn = nn.Sequential(
             nn.Linear(28*28, 1056),
             nn.ReLU(),
@@ -59,7 +59,7 @@ class Model(pl.LightningModule):
         # self.logger.experiment.add_images('val_images', data, self.current_epoch)
         # data has to be a tensor of shape (n_images, channels, height, width). 
         # data can be torch.cat() on some dimension (height/width) with the target before passing into the logger.
-        
+
         return {'loss': loss}
 
 
